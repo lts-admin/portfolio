@@ -22,14 +22,26 @@ export default function Projects() {
                         className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 bg-white"
                     >
                         <h3 className="text-2xl font-bold text-[#1c1c1c] mb-1">
-                            <a
-                                href={proj.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:underline"
-                            >
-                                {proj.title}
-                            </a>
+                            {proj.url ? (
+                                <div className="inline-flex items-center gap-1">
+                                    <a
+                                        href={proj.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:underline font-bold text-xl"
+                                    >
+                                        {proj.title}
+                                    </a>
+
+                                    <span className="w-2 h-2 rounded-full bg-red-500  translate-y-[2px]" />
+                                </div>
+
+                            ) : (
+                                <p>{proj.title}</p>
+
+
+                            )}
+
                         </h3>
 
                         <p className="text-sm italic text-gray-500 mb-2">{proj.role}</p>

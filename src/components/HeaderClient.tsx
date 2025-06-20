@@ -16,6 +16,7 @@ export default function HeaderClient() {
                             section.scrollIntoView({ behavior: 'smooth' });
                         }
                     }}
+                    className="hover:underline"
                 >
                     Projects
                 </button>
@@ -26,6 +27,7 @@ export default function HeaderClient() {
                             section.scrollIntoView({ behavior: 'smooth' });
                         }
                     }}
+                    className="hover:underline"
                 >
                     Experience
                 </button>
@@ -36,8 +38,21 @@ export default function HeaderClient() {
                             section.scrollIntoView({ behavior: 'smooth' });
                         }
                     }}
+                    className="hover:underline"
                 >
                     Contact
+                </button>
+                <button
+                    onClick={() => {
+                        const link = document.createElement('a');
+                        link.href = '/SatyaVinjamuri.pdf';
+                        link.download = 'SatyaVinjamuri.pdf';
+                        link.click();
+                    }}
+                    className="hover:underline"
+                // className="border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition"
+                >
+                    Download CV
                 </button>
             </nav>
         </header>

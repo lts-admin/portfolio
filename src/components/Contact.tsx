@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { contact } from '@/data/contact';
+import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -12,17 +14,37 @@ export default function Contact() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log('Form submitted:', form);
-        // You can replace this with actual form handling logic
     };
 
     return (
-        <section id="contact" className="min-h-screen bg-[#f5f5f2] w-full text-[#1c1c1c] px-8 flex flex-col items-center justify-center text-center">
-            <div className="max-w-2xl w-full">
+        <section id="contact" className="min-h-screen bg-[#f5f5f2] text-[#1c1c1c] px-8 py-20 flex items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl items-start">
+                {/* Left side with icons */}
+                <div className="space-y-6 text-left w-full md:w-1/2">
+                    <h2 className="text-4xl font-bold mb-4">Contact Info</h2>
+                    <div className="flex items-center gap-4">
+                        <FaEnvelope className="text-xl text-red-500" />
+                        <a href={`mailto:${contact[0].email}`} className="hover:underline">
+                            {contact[0].email}
+                        </a>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <FaPhoneAlt className="text-xl text-blue-500" />
+                        <a href={`tel:${contact[0].phone}`} className="hover:underline">
+                            {contact[0].phone}
+                        </a>
+                    </div>
+                    <div className="flex items-center gap-4">
+                        <FaLinkedin className="text-xl text-[#0e76a8]" />
+                        <a href={contact[0].linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
 
-                <h2 className="text-4xl font-bold mb-6">Contact</h2>
-                <p className="text-lg mb-8 max-w-xl">Interested in working together or just want to say hi? Fill out the form below or email me directly.</p>
-
-                <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">
+                {/* Right side with form */}
+                <form onSubmit={handleSubmit} className="w-full md:w-1/2 space-y-6">
+                    <h2 className="text-4xl font-bold mb-6 text-center md:text-left">Send a Message</h2>
                     <div>
                         <label htmlFor="name" className="block text-sm font-bold text-left">Name</label>
                         <input

@@ -36,7 +36,8 @@ export default function Hero() {
                                     section.scrollIntoView({ behavior: 'smooth' });
                                 }
                             }}
-                            className="mt-6 inline-block border border-black px-6 py-3 text-sm rounded-full hover:bg-black hover:text-white transition"
+                            className=" mt-6 border border-black px-6 py-3 text-sm rounded-full animate-pulse transition-transform duration-300 hover:scale-150 hover:bg-black hover:font-bold hover:text-white"
+
                         >
                             CONTACT ↗
                         </button>
