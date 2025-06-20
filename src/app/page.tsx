@@ -13,15 +13,15 @@ export default function HomePage() {
         <Hero />
       </section>
 
-      <section className="snap-start scroll-mt-20" id="projects">
+      <section className="snap-start scroll-mt-10 md:pb-35" id="projects">
         <Projects />
       </section>
 
-      <section className="snap-start scroll-mt-20" id="experience">
+      <section className="snap-start py-40 pb-30" id="experience">
         <Experience />
       </section>
 
-      <section className="snap-start scroll-mt-20" id="contact">
+      <section className="snap-start" id="contact">
         <Contact />
       </section>
     </main>
