@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { useRouter } from 'next/navigation';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Hero() {
