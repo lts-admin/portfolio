@@ -13,10 +13,10 @@ export const projects = [
         description: 'An influencer collaboration platform with role-based flows for creators and brands, built on Next.js, Flask, and AWS.',
         tech: ['Next.js', 'Flask', 'AWS', 'Sanity CMS', 'DynamoDB'],
     },
-    {
-        title: 'Unlocked Foundation App',
-        role: 'Mobile App Developer',
-        description: 'A Flutter iOS app supporting women’s financial growth through workshops, journaling, and mentorship, backed by Cognito and MongoDB.',
-        tech: ['Flutter', 'AWS Cognito', 'MongoDB', 'AWS Lambda'],
-    }
+    // {
+    //     title: 'Unlocked Foundation App',
+    //     role: 'Mobile App Developer',
+    //     description: 'A Flutter iOS app supporting women’s financial growth through workshops, journaling, and mentorship, backed by Cognito and MongoDB.',
+    //     tech: ['Flutter', 'AWS Cognito', 'MongoDB', 'AWS Lambda'],
+    // }
 ];
