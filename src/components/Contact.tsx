@@ -18,9 +18,10 @@ export default function Contact() {
 
     return (
         <section id="contact" className="min-h-screen bg-[#f5f5f2] text-[#1c1c1c] px-4 sm:px-8 py-12 flex flex-col items-center justify-start">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">Let's Work Together!</h2>
-
-            <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+                Let&rsquo;s Work Together!
+            </h2>
+            <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl py-4 md:py-12">
                 {/* Contact Info */}
                 <div className="space-y-6 w-full md:w-1/2">
                     <div className="flex items-center gap-3">

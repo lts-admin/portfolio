@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 export default function HeaderClient() {
-    const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
 
     const scrollTo = (id: string) => {
@@ -42,7 +40,8 @@ export default function HeaderClient() {
         >
             <div className="flex justify-between items-center">
                 {/* Mobile: Tagline + Menu Button */}
-                <div className="md:hidden flex justify-between items-center w-full">
+                {/* Mobile view (hamburger + tagline) */}
+                <div className="flex md:hidden justify-between items-center w-full">
                     <span
                         className={`text-lg font-medium ${isOpen ? 'border-b border-gray-400 pb-1 w-full' : 'truncate'
                             }`}
@@ -53,6 +52,14 @@ export default function HeaderClient() {
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
+
+                {/* Desktop view (full tagline) */}
+                <div className="hidden md:flex justify-between items-center w-full">
+                    <span className="text-lg font-medium">
+                        Full Stack Engineer • Builder of Lean, Launch-Ready Products
+                    </span>
+                </div>
+
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex space-x-6 w-full justify-end">
